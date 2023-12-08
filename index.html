@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    favicon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="./asset/image/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./asset/image/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./asset/image/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./asset/image/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./asset/image/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./asset/image/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./asset/image/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./asset/image/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./asset/image/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./asset/image/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./asset/image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./asset/image/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./asset/image/favicon-16x16.png">
+    <link rel="manifest" href="./asset/image/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+<!--    google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!--link icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!--    link css-->
+    <link rel="stylesheet" href="style.css">
+    <title>Profile</title>
+</head>
+<body>
+<!--header-->
+<header>
+     <a href="" class="logo"><span>N.</span><span>Quỳnh</span></a>
+     <ul class="navbar">
+         <li><a href="#home" class="active smooth-scroll-link">Home</a></li>
+         <li><a href="#about" class="smooth-scroll-link">About</a></li>
+         <li><a href="#expected" class="smooth-scroll-link">Expected</a></li>
+         <li><a href="#challenge" class="smooth-scroll-link">Challenge</a></li>
+         <li><a href="#project" class="smooth-scroll-link">Project</a></li>
+         <li><a href="#contact" class="smooth-scroll-link">Contact</a></li>
+     </ul>
+    <div class="menu">
+        <span>INTRO</span>
+        <div class="list-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
+<div class="container">
+<!--home-->
+<div class=" section home" id="home">
+<div class="detail-home">
+    <div class="home-left">
+        <div class="home-text">
+            <span>LẬP TRÌNH VIÊN</span>
+            <h1>NGUYỄN THỊ QUỲNH</h1>
+            <p >Xin chào , tôi là một lập trình viên FRONT-END mới. Tôi vừa tốt nghiệp khoá học JavaScrip BootCamp<i class="dots">...</i>
+                <i class="add" onclick="add()">xem thêm </i><span class="add-content">. Trước đây, tôi từng tốt nghiệp khoa Tài chính của trường Học Viện Ngân Hàng <i onclick="toggleContent()" class="hidden">ẩn bớt </i></span>
+                </p>
+
+        </div>
+        <div class="bottom">
+            <a href="">Download CV</a>
+            <a href="">Contact Me</a>
+        </div>
+    </div>
+    <div class="home-img">
+        <img src="./asset/image/anh1.jpg" alt="">
+    </div>
+</div>
+    <div class="share">
+        <p>Check out my:</p>
+        <div class="social">
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fas fa-envelope-open-text"></i></a>
+            <a href=""><i class="fab fa-linkedin-in"></i></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
+
+        </div>
+    </div>
+</div>
+
+<!--about-->
+<div class=" section about" id="about">
+    <div class="heading">
+        <span>About</span>Me
+    </div>
+    <div class="dash"></div>
+    <div class="heading-main">
+     <div class="main-image">
+        <img src="./asset/image/anhcanhan1.jpg" alt="">
+     </div>
+
+     <div class="info">
+         <div class="me">
+             <div>
+                 <h3>Họ va tên:<span>Nguyễn Thị Quỳnh</span></h3>
+                 <h3>Ngày sinh<span>04/06/1993</span></h3>
+             </div>
+             <div>
+                 <h3>Học vấn:<span>Đại Học</span></h3>
+                 <h3>SĐT:<span> 0869670855</span></h3>
+             </div>
+
+         </div>
+         <div >
+               <p><strong>Mục tiêu: </strong> Tôi mong muốn trong thời gian sắp tới tôi sẽ thành thạo các kỹ năng cũng như kỹ thuật về JavaScrip</p>
+
+         </div>
+
+     </div>
+    </div>
+    <div class="experience">
+        <div class="about-containers">
+
+                <h2 class="experience-sub-title"> Experience<span>Frontend Development</span></h2>
+                <div class="article-container">
+                    <article>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>HTML</h3>
+                            <p>Experienced</p>
+                        </div>
+                    </article>
+                    <article>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>CSS</h3>
+                            <p>Experienced</p>
+                        </div>
+                    </article>
+                    <article>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>SASS</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                    <article>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>JavaScript</h3>
+                            <p>Basic</p>
+                        </div>
+                    </article>
+                    <article>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>TypeScript</h3>
+                            <p>Basic</p>
+                        </div>
+                    </article>
+                    <article>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Material UI</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+
+    </div>
+</div>
+<!--    expected-->
+    <div class=" section expected" id="expected">
+        <div class="heading">
+            <strong>My</strong>  <span>Expected</span>
+        </div>
+        <div class="dash"></div>
+        <div class="box-container">
+            <div class="box">
+               <i class="fas fa-graduation-cap"></i>
+                <span>Kỳ vọng 01</span>
+                <p>Tôi chia layout chuẩn </p>
+                <p>Tôi viết code gọn gàng</p>
+                <p>Tôi thành thạo Css,JS</p>
+
+            </div>
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Kỳ vọng 02</span>
+                <p> Làm việc chuyên nghiệp</p>
+                <p>Kỹ năng thuyết trình tốt hơn</p>
+                <p>Kỹ năng hợp tác, viết báo cáo</p>
+
+
+            </div>
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Kỳ vọng 03</span>
+                <p>Cơ hội gắn bó lâu dài</p>
+                <p>Được cống hiến làm việc</p>
+                <p>Hoàn thiện bản thân </p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+<!--    challenge-->
+
+   <div class="section timeline" id="challenge">
+       <div class="heading">
+           <strong>My</strong>  <span>Challenge</span>
+       </div>
+       <div class="wrap-box ">
+           <div class="wrap-left">
+               <div class="wrap ">
+
+                   <div class="timeline-container left-container">
+
+                       <div class="text-box">
+                           <h2>Thử thách 01</h2>
+                           <small>00/00/2020 - 09/12/2023</small>
+                           <p> Lập 01 website giới thiệu về bản thân và thông tin quá trình thực tập tại I&E Việt Nam</p>
+                           <a href="#">Link tham khảo</a>
+                       </div>
+                   </div>
+               </div>
+               <div class="wrap">
+
+                   <div class="timeline-container right-container">
+
+                       <div class="text-box">
+                           <h2>Thử thách 03</h2>
+                           <small>11/12/2023 - 16/11/2023</small>
+                           <p> Sử dụng quy chuẩn code được đào tạo để thiết kế 02 giao diện theo mẫu thiết kế được cung cấp</p>
+                       </div>
+                   </div>
+               </div>
+               <div class="wrap">
+
+                   <div class="timeline-container left-container">
+
+                       <div class="text-box">
+                           <h2>Thử thách 05</h2>
+                           <small>11/12/2023 - 16/11/2023</small>
+                           <p>Ứng dụng INEVO triển khai tạo một website giớ thiệu về lịch sử Việt Nam với giao dện truỳ chọn</p>
+                       </div>
+                   </div>
+               </div>
+               <div class="wrap">
+
+                   <div class="timeline-container right-container">
+
+                       <div class="text-box">
+                           <h2>Thử thách 07</h2>
+                           <small>11/12/2023 - 16/11/2023</small>
+                           <p>Sử dụng Bảng quản trị trên hệ thống mạng nội bộ INEVO để thực hiện phần mnm quản lý bài viết của bản thân trên hệ thống INEVO</p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+         <div class="wrap-right">
+             <div class="wrap">
+                 <div class="timeline-container left-container">
+                     <div class="text-box">
+                         <h2>Thử thách 02</h2>
+                         <small>11/12/2023 - 16/11/2023</small>
+                         <p> Sử dụng HTML, CSS, JS viết minigame theo chủ đề bốc thăm</p>
+                     </div>
+
+                 </div>
+             </div>
+             <div class="wrap">
+
+                 <div class="timeline-container right-container">
+                     <div class="text-box">
+                         <h2>Thử thách 04</h2>
+                         <small>11/12/2023 - 16/11/2023</small>
+                         <p> Sử dụng INEVO để thiết kế 01 website động lấy dữ liệu thực từ h thống nội bộ </p>
+                     </div>
+                 </div>
+             </div>
+             <div class="wrap">
+                 <div class="timeline-container left-container">
+                     <div class="text-box">
+                         <h2>Thử thách 06</h2>
+                         <small>211/12/2023 - 16/11/2023</small>
+                         <p> Thiết kế giao diê phần mềm trên hệ thống nội bộ INEVO theo thiết kế có sẵn</p>
+                     </div>
+                 </div>
+         </div>
+
+         </div>
+       </div>
+   </div>
+<!--   project-->
+    <div class=" section project" id="project">
+        <div class="heading">
+            <strong>My</strong>  <span>Project</span>
+        </div>
+
+        <div class="container">
+            <i  class="fas fa-chevron-left" onclick="previousSlice()"></i>
+            <div class="slice">
+                <div id="container-project">
+                    <div class="container-project">
+
+                        <div class="box" onmouseenter="showButton(this)" onmouseleave="hideButton(this)">
+                            <button class="show-more" >Xem thêm</button>
+                            <img src="./asset/image/dự%20án1.png" alt="">
+                        </div>
+                        <div class="box" onmouseenter="showButton(this)" onmouseleave="hideButton(this)" >
+                            <button class="show-more" >Xem thêm</button>
+                            <img src="./asset/image/dự%20án%202.png" alt="">
+                        </div>
+                        <div class="box" onmouseenter="showButton(this)" onmouseleave="hideButton(this)">
+                            <button class="show-more" >Xem thêm</button>
+                            <img src="./asset/image/anh11.jpg" alt="">
+                        </div>
+
+
+                    </div>
+                    <div class="container-project">
+
+                        <div class="box" onmouseenter="showButton(this)" onmouseleave="hideButton(this)">
+                            <button class="show-more" >Xem thêm</button>
+                            <img src="./asset/image/anh11.jpg" alt="">
+                        </div>
+                        <div class="box" onmouseenter="showButton(this)" onmouseleave="hideButton(this)">
+                            <button class="show-more" >Xem thêm</button>
+                            <img src="./asset/image/anh12.jpg" alt="">
+                        </div>
+                        <div class="box" onmouseenter="showButton(this)" onmouseleave="hideButton(this)">
+                            <button class="show-more" >Xem thêm</button>
+                            <img src="./asset/image/anh13.jpg" alt="">
+                        </div>
+
+
+                    </div>
+                    <div class="container-project">
+
+                        <div class="box" onmouseenter="showButton(this)" onmouseleave="hideButton(this)">
+                            <button class="show-more" >Xem thêm</button>
+                            <img src="https://noithatbinhminh.com.vn/wp-content/uploads/2022/08/anh-dep-40.jpg" alt="">
+                        </div>
+                        <div class="box" onmouseenter="showButton(this)" onmouseleave="hideButton(this)">
+                            <button class="show-more" >Xem thêm</button>
+                            <img src="./asset/image/dự%20án%202.png" alt="">
+                        </div>
+                        <div class="box" onmouseenter="showButton(this)" onmouseleave="hideButton(this)">
+                            <button class="show-more" >Xem thêm</button>
+                            <img src="./asset/image/anh15.jpg" alt="">
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <i class="fas fa-chevron-right" onclick="nextSlice()"></i>
+
+
+        </div>
+    </div>
+    <div class="section contact" id="contact">
+        <div class="heading">
+            <span>Contact</span>Me
+        </div>
+        <div class="row">
+        <div class="content">
+            <h3 class="title">
+                Contact info
+            </h3>
+            <div class="information">
+                <h3><i class="fas fa-envelope-open-text"></i>nguyenthiquynhhvnh92@gmail.com</h3>
+                <h3><i class="fas fa-phone-square-alt"></i>+ 012345678</h3>
+                <h3><i class="far fa-address-card"></i> hà đông hà nội</h3>
+            </div>
+        </div>
+        <form action="">
+            <input type="text" placeholder="Name" class="box">
+            <input type="email" placeholder="Email" class="box">
+            <input type="text" placeholder="Project" class="box">
+            <textarea name="my-textarea" rows="10" placeholder="Message"></textarea>
+             <div class="submit"> Send <i class="fas fa-paper-plane"></i></div>
+        </form>
+        </div>
+    </div>
+</div>
+<!--nút quay lên -->
+<a href="#home" class="top smooth-scroll-link">
+    <img src="./asset/image/scroll-up-icon-11.jpg" alt="">
+</a>
+<script>
+    function showButton(container) {
+        var button = container.querySelector('.show-more');
+        button.style.display = 'block';
+    }
+
+    function hideButton(container) {
+        var button = container.querySelector('.show-more');
+        button.style.display = 'none';
+    }
+
+    var showMoreButton = document.querySelector('.show-more');
+
+    showMoreButton.addEventListener('mouseenter', function() {
+        this.style.padding="12px"
+    });
+
+    showMoreButton.addEventListener('mouseleave', function() {
+        this.style.padding = '10px';
+    });
+
+    function add() {
+        console.log(1);
+        let dots = document.getElementsByClassName("dots")[0];
+        let add = document.getElementsByClassName("add")[0];
+        let content = document.getElementsByClassName("add-content")[0];
+        dots.style.display = "none";
+        add.style.display = "none";
+        content.style.display = "inline";
+    }
+    function toggleContent() {
+        console.log(1);
+        let dots = document.getElementsByClassName("dots")[0];
+        let add = document.getElementsByClassName("add")[0];
+        let content = document.getElementsByClassName("add-content")[0];
+        dots.style.display = "inline";
+        add.style.display = "inline";
+        content.style.display = "none";
+    }
+
+    const sections = document.querySelectorAll('.section');
+    let wrap = document.getElementsByClassName("wrap-box")[0];
+
+    let currentSectionIndex = 0;
+
+    const scrollToSection = (index) => {
+        const section = sections[index]; // Lấy phần tử section tại chỉ mục index
+        window.scrollTo({
+            top: section.offsetTop, // Đặt vị trí cuộn đến là offsetTop của section
+            behavior: 'smooth' // Cuộn mượt đến vị trí
+        });
+    };
+
+    window.addEventListener('wheel', (e) => {
+        e.preventDefault(); // Ngăn chặn sự kiện cuộn mặc định của trình duyệt
+
+        if (e.deltaY > 0 && currentSectionIndex < sections.length - 1) {
+            // Nếu cuộn xuống và currentSectionIndex không phải phần tử cuối cùng
+            currentSectionIndex++; // Tăng currentSectionIndex lên
+            scrollToSection(currentSectionIndex); // Cuộn đến phần tử section mới
+            if(currentSectionIndex===3){
+                wrap.style.display = "flex";
+            }
+            else {
+                wrap.style.display = "none";
+            }
+        } else if (e.deltaY < 0 && currentSectionIndex > 0) {
+            // Nếu cuộn lên và currentSectionIndex không phải phần tử đầu tiên
+            currentSectionIndex--; // Giảm currentSectionIndex xuống
+            scrollToSection(currentSectionIndex); // Cuộn đến phần tử section mới
+            if(currentSectionIndex===3){
+                wrap.style.display = "flex";
+            }
+            else {
+                wrap.style.display = "none";
+            }
+
+        }
+    });
+
+    scrollToSection(currentSectionIndex);
+
+    const smoothScrollLinks = document.querySelectorAll('.smooth-scroll-link');
+
+
+    for (let i = 0; i < smoothScrollLinks.length; i++) {
+        smoothScrollLinks[i].addEventListener('click', (e) => {
+            e.preventDefault(); // Ngăn chặn hành vi mặc định khi click vào liên kết
+
+            const targetId = smoothScrollLinks[i].getAttribute('href'); // Lấy giá trị thuộc tính href của liên kết
+            const targetSection = document.querySelector(targetId); // Tìm phần tử mục tiêu dựa trên giá trị href
+            console.log(targetSection, 111);
+
+            if (targetSection) {
+                const targetOffset = targetSection.offsetTop;
+                const scrollOptions = {
+                    top: targetOffset,
+                    behavior: 'smooth'
+                };
+                window.scrollTo(scrollOptions);
+                if(targetId==="#challenge"){
+                    wrap.style.display = "flex";
+                }
+                else {
+                    wrap.style.display = "none";
+
+                }
+
+            }
+        })
+    }
+
+
+</script>
+<script src="script.js"></script>
+</body>
+</html>
