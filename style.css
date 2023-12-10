@@ -10,30 +10,22 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    /*font-size: 62.5%;*/
-    overflow-x:hidden;
+
 }
 *::selection{
     background: var(--yellow);
     color:#333 ;
 }
-html::-webkit-scrollbar{
-    width:14px;
-}
-html::-webkit-scrollbar-track{
-   background: #222;
-}
-html::-webkit-scrollbar-thumb{
-    background: var(--yellow);
-}
+
 body{
     background: #111010FF;
-    overflow: hidden;
     color: #FFF;
 }
-header{
+
+header {
+
     position: fixed;
-    top:0;
+    top: 0;
     right: 0;
     width: 100%;
     background: #333333;
@@ -44,8 +36,51 @@ header{
     justify-content: space-between;
     padding: 32px 15%;
     transition: all ease 0.5s;
-    overflow: hidden;
+
 }
+
+.slide-container {
+    position: fixed;
+    top: 0;
+    right: 0; /* Thay đổi giá trị right thành 0 để slide-container xuất hiện từ phải */
+    width: 300px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    transform: translateX(300px); /* Thay đổi giá trị translateX thành 100% để ẩn slide-container ngoài màn hình bên phải */
+    transition: transform 0.3s ease-out;
+}
+
+.slide-container.open {
+    transform: translateX(0); /* Thay đổi giá trị translateX thành 0% để hiển thị slide-container */
+}
+
+
+.slide-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3b3b3b;
+    padding: 20px;
+}
+
+
+.slide-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.slide-content ul li {
+    margin-bottom: 40px;
+    margin-left: 30px;
+
+}
+.slide-content ul li:first-child{
+    margin-top: 20px;
+}
+/*hét*/
 header .logo{
     color: var(--text);
     font-size: 35px;
@@ -55,7 +90,7 @@ header .logo{
 header .logo span:last-child{
     color: var(--yellow);
 }
-.navbar{
+header .navbar{
     display: flex;
 }
 .navbar a{
@@ -75,9 +110,8 @@ header .logo span:last-child{
 .menu {
     display: none;
     background: var(--yellow);
-    box-shadow: 0 2px 2px #cccc;
-    background-image: linear-gradient(to right, var(--yellow) 20%, #fff);
-    padding: 10px 20px;
+    box-shadow: 0 1px 1px #cccc;
+    padding: 5px 10px;
     border-radius: 999px;
     cursor: pointer;
     align-items: center;
@@ -85,25 +119,15 @@ header .logo span:last-child{
 .menu span{
     margin: 0 10px 0 0 ;
     font-size: 18px;
+    font-weight: 500;
 }
 .menu i {
     font-size: 24px;
 }
-.container{
-    display: flex;
-    flex-direction: column;
-    height: 600%;
 
-}
-.section {
-    flex: 1;
-    width: 100%;
-    height: 100vh;
-}
 .home{
-    padding: 17% 20% 7%;
-    width: 100%;
-    height: 100%;
+    padding: 10% 20% 0;
+   
 
 }
 .detail-home{
@@ -227,7 +251,7 @@ header .logo span:last-child{
 }
 /*about*/
 .about{
-   padding: 8% 15% 1%;
+   padding: 10% 15% 0;
 }
 .heading{
     font-size: 40px;
@@ -242,7 +266,7 @@ header .logo span:last-child{
     width: 100%;
     height: 2px;
     background: #cccc;
-    margin: 15px 0 20px;
+    margin: 0 0 15px;
 }
 .heading-main{
     display: flex;
@@ -265,7 +289,7 @@ header .logo span:last-child{
 .experience{
     width: 100%;
     background: #3b3b3b;
-    margin: 30px 0;
+    margin: 15px 0;
     border-radius: 25px;
     border: 2px solid;
 }
@@ -279,7 +303,7 @@ header .logo span:last-child{
 }
 .info h3{
     font-size: 18px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 .info span{
     color: #f9ca24;
@@ -303,14 +327,14 @@ header .logo span:last-child{
 .experience-sub-title{
     display: block;
     text-align: center;
-    margin: 20px 0 50px;
+    margin: 15px 0 50px;
 }
 .experience-sub-title span{
     color: #f9ca24;
-    margin-left: 20px;
+    margin-left: 15px;
 }
 .article-container{
-    margin: 50px 20px 50px;
+    margin: 30px 20px 30px;
 }
 article {
     display: inline-flex;
@@ -325,7 +349,7 @@ article i {
     margin-right: 10px ;
 }
 .expected {
-    padding: 10% 15% 16%;
+    padding: 10% 15% 5%;
 }
 .section.expected span{
     margin-right: 0;
@@ -333,7 +357,6 @@ article i {
 }
 .expected .box-container{
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 .expected .box-container .box{
@@ -367,10 +390,11 @@ article i {
 }
 /*challenge*/
 .timeline{
-    padding: 6% 15% 3%;
+    padding: 10% 15% 3%;
     position: relative;
     max-width: 100%;
     z-index: -1;
+    /*height: 120%;*/
 }
 .timeline-container{
     padding: 10px 20px;
@@ -381,16 +405,14 @@ article i {
 
 }
 
-
-
 .wrap-box {
-    /*display: none;*/
+    display: none;
     margin-top: 20px;
     position: relative;
     width: 100%;
     /*opacity: 0;*/
-    transition: opacity 0.5s ease;
-    display: flex;
+    transition: opacity 1s ease;
+
 }
 
 .wrap-box::after {
@@ -402,8 +424,7 @@ article i {
     top: 0;
     left: 50%;
     z-index: 1;
-    animation: moveline 3.5s linear forwards;
-
+    animation: moveline 7s linear forwards;
 
 }
 @keyframes moveline {
@@ -416,9 +437,13 @@ article i {
 }
 
 .wrap{
-    width: 100%;
-    animation: movedown 0.5s linear forwards;
+    position: relative;
+    width:50%;
+    animation: movedown 1s linear forwards;
     opacity: 0;
+}
+.wrap.right-container{
+    left: 50%;
 }
 @keyframes movedown {
     0% {
@@ -430,39 +455,39 @@ article i {
         opacity: 1;
     }
 }
-.wrap-right{
+.wrap{
     height: 75%;
-    margin: auto;
 }
 
-.wrap-left .wrap:nth-child(1) {
-
+.wrap-box .wrap:nth-child(1) {
     animation-delay: 0s;
 }
 
-.wrap-left .wrap:nth-child(2) {
+.wrap-box .wrap:nth-child(2) {
 
     animation-delay: 1s;
 }
 
-.wrap-left .wrap:nth-child(3) {
+.wrap-box .wrap:nth-child(3) {
     animation-delay: 2s;
 }
 
-.wrap-left .wrap:nth-child(4) {
+.wrap-box .wrap:nth-child(4) {
     animation-delay: 3s;
 }
 
-.wrap-right .wrap:nth-child(1) {
-    animation-delay: 0.5s;
+
+.wrap-box .wrap:nth-child(5) {
+    animation-delay: 4s;
 }
 
-.wrap-right .wrap:nth-child(2) {
-    animation-delay: 1.5s;
+
+.wrap-box .wrap:nth-child(6) {
+    animation-delay: 5s;
 }
 
-.wrap-right .wrap:nth-child(3) {
-    animation-delay: 2.5s;
+.wrap-box .wrap:nth-child(7) {
+    animation-delay: 6s;
 }
 .text-box a{
     font-style: italic;
@@ -493,18 +518,13 @@ article i {
     font-style:italic;
 }
 
-
-
-
-
 /*project*/
 .project {
-    padding: 10% 15% 8%;
+    padding: 10% 15% 10%;
 }
 .project {
     width: 100%;
-    height: 80vh;
-position: relative;
+    position: relative;
 }
 .project .fa-chevron-left{
     position: absolute;
@@ -539,39 +559,36 @@ position: relative;
     display: flex;
 }
 .slice{
-    width: 90%;
+    width: 86%;
     height: 90%;
     position: relative;
-
+    overflow: hidden;
     margin: auto;
 
 }
 #container-project{
     display: flex;
     position: relative;
-    overflow-x: visible;
     height: 100%;
 }
 
 .container-project{
     width: 100%;
     height: 100%;
-    flex: 1 0 99%;
+    flex: 1 0 100%;
     display: flex;
     justify-content: space-around;
     text-align: center;
     align-items: center;
-    overflow: hidden;
-    overflow-x: visible;
 }
 .container-project button{
     position: absolute;
     padding: 10px;
     background: #f9ca24;
-    box-shadow: 1px 4px 2px 4px #eeeeee;
+    box-shadow: 1px 2px 2px 1px #eeeeee;
     z-index: 1000;
     border-radius: 999px;
-    left: 30%;
+    left: 33%;
     top: 40%;
     font-size: large;
     display: none;
@@ -607,7 +624,7 @@ position: relative;
 }
 /*contact*/
 .contact{
-    padding: 5% 15% 0;
+    padding:10% 15% 0;
 }
 .contact .row{
     display: flex;
@@ -622,8 +639,8 @@ position: relative;
 }
 .contact .row form {
     flex: 1 1 450px;
-    padding: 20px;
-    margin: 20px 20px 40px ;
+    /*padding: 20px;*/
+    margin: 0 20px 40px ;
 
 }
 .contact .row form .box,.contact .row form textarea   {
@@ -655,7 +672,7 @@ position: relative;
 .submit:hover{
     background: #f9ca24;
     color: black;
-   
+
 }
 .contact .row .content .title{
     text-transform: uppercase;
@@ -673,7 +690,7 @@ position: relative;
 }
 .contact .row .content .information i{
     color: #f9ca24;
-    margin: 20px 20px 10px 0;
+    margin: 0px 20px 10px 0;
 }
 .top{
     position: fixed;
