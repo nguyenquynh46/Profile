@@ -71,13 +71,13 @@ challengesContainer.innerHTML = `
 // thiết lập slide
 const slices = document.getElementsByClassName("container-project");
 const currentSlices = document.getElementById('container-project');
-let slicesWidth = slices[0].offsetWidth;
+let slicesWidth = slices[0].offsetWidth;//chiều rộng của phần tử đầu tiên trong mảng slices
 let currentIndex = 0;
 let positionX = 0;
 
 function updateCarousel() {
     slicesWidth = slices[0].offsetWidth;
-    positionX = -slicesWidth * currentIndex;
+    positionX = -slicesWidth * currentIndex;//định vị vị trí hiện tại của carousel.
     currentSlices.style.transition = 'none';
     currentSlices.style.transform = `translateX(${positionX}px)`;
 }
@@ -87,6 +87,7 @@ function nextSlice() {
         positionX = positionX - slicesWidth;
         currentSlices.style.transition = 'transform 0.3s ease-in-out';
         currentSlices.style.transform = `translateX(${positionX}px)`;
+        //âm là di chuyển từ phải sang trái
         currentIndex++;
     }
 
@@ -94,6 +95,7 @@ function nextSlice() {
         setTimeout(() => {
             currentSlices.style.transition = 'none';
             currentSlices.style.transform = 'translateX(0)';
+
             positionX = 0;
             currentIndex = 0;
         }, 300);
@@ -105,6 +107,7 @@ function previousSlice() {
         positionX = positionX + slicesWidth;
         currentSlices.style.transition = 'transform 0.3s ease-in-out';
         currentSlices.style.transform = `translateX(${positionX}px)`;
+        //chuyển từ trái sang phải
         currentIndex--;
     }
 
@@ -139,11 +142,32 @@ document.addEventListener('DOMContentLoaded', function () {
         main.style.opacity="0.5"
     });
 
-    document.addEventListener('click', function (event) {
-        var targetElement = event.target;
-        if (!slideContainer.contains(targetElement) && slideContainer.classList.contains('open')) {
+    document.addEventListener('click', function () {
+
+        if ( slideContainer.classList.contains('open')) {
             slideContainer.classList.remove('open'); // Xóa lớp "open" khi click bất kỳ đâu trên màn hình ngoài slide-container và slide-container đang hiển thị
             main.style.opacity="1"
         }
     });
+});
+// xong điều hướng bằng nút
+function hienThiKhiCuonDenDiv() {
+    var div = document.getElementById('challenge'); // Thay 'ten-div' bằng id của div bạn muốn bắt sự kiện
+
+    var rect = div.getBoundingClientRect();
+    var windowHeight = window.innerHeight;
+    console.log(rect.top, 11111)
+    // Kiểm tra xem div có trong tầm nhìn của trình duyệt hay không
+    if (rect.top < windowHeight && rect.bottom >= 0) {
+
+        wrap.style.display = "block";
+    } else {
+        wrap.style.display = "none";
+    }
+}
+
+// Gắn sự kiện cuộn cho trang web
+// Gắn sự kiện cuộn cho trang web
+window.addEventListener('scroll', () => {
+    hienThiKhiCuonDenDiv();
 });

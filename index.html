@@ -340,7 +340,7 @@
     <img src="./asset/image/scroll-up-icon-11.jpg" alt="">
 </a>
 <script>
-
+// khi di chuyển vào từng dự án nút xem thêm sẽ xuât hiện
     function showButton(container) {
         var button = container.querySelector('.show-more');
         button.style.display = 'block';
@@ -350,7 +350,7 @@
         var button = container.querySelector('.show-more');
         button.style.display = 'none';
     }
-
+//xử lý hiêu ứng khi di chuyển chuột vào nút xem thêm
     var showMoreButton = document.querySelector('.show-more');
 
     showMoreButton.addEventListener('mouseenter', function () {
@@ -360,7 +360,7 @@
     showMoreButton.addEventListener('mouseleave', function () {
         this.style.padding = '10px';
     });
-
+// xử lý nút xem thêm ở home
     function add() {
         console.log(1);
         let dots = document.getElementsByClassName("dots")[0];
@@ -372,7 +372,7 @@
     }
 
     function toggleContent() {
-        console.log(1);
+        console.log(2);
         let dots = document.getElementsByClassName("dots")[0];
         let add = document.getElementsByClassName("add")[0];
         let content = document.getElementsByClassName("add-content")[0];
@@ -381,7 +381,7 @@
         content.style.display = "none";
     }
 
-    // const sections = document.querySelectorAll('.section');
+
     let wrap = document.getElementsByClassName("wrap-box")[0];
 
 
@@ -398,15 +398,16 @@
                 smoothScrollLinks[j].classList.remove("active");
             }
             link.classList.add("active");
+            //nếu là nút backontop thì sẽ trở về home
             if (i === smoothScrollLinks.length - 1) {
                 smoothScrollLinks[0].classList.add("active")
             }
-            const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
+            const targetId = link.getAttribute('href');//lấy giá trị của thuộc tính href
+            const targetSection = document.querySelector(targetId);//tìm phần tử trong tài liệu HTML có ID tương ứng
             if (targetId === "#challenge" || targetId === "#contact") {
                 console.log(targetId, 999)
                 wrap.style.display = "block";
-                const targetOffset = targetSection.offsetTop;
+                const targetOffset = targetSection.offsetTop;//trả về một giá trị số đại diện cho khoảng cách từ đầu trang (top) của tài liệu HTML đến phần tử được chọn
 
                 const scrollOptions = {
                     top: targetOffset,
@@ -426,26 +427,7 @@
         });
     });
 
-    // xong điều hướng bằng nút
-    function hienThiKhiCuonDenDiv() {
-        var div = document.getElementById('challenge'); // Thay 'ten-div' bằng id của div bạn muốn bắt sự kiện
 
-        var rect = div.getBoundingClientRect();
-        var windowHeight = window.innerHeight;
-        console.log(rect.top, 11111)
-        // Kiểm tra xem div có trong tầm nhìn của trình duyệt hay không
-        if (rect.top < windowHeight && rect.bottom >= 0) {
-            wrap.style.display = "block";
-        } else {
-            wrap.style.display = "none";
-        }
-    }
-
-    // Gắn sự kiện cuộn cho trang web
-    // Gắn sự kiện cuộn cho trang web
-    window.addEventListener('scroll', () => {
-        hienThiKhiCuonDenDiv();
-    });
 
 
 </script>
