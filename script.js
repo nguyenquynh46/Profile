@@ -1,3 +1,73 @@
+
+let challenges = [
+    {
+
+        title: "Thử thách 01",
+        date: "00/00/2020 - 09/12/2023",
+        description: "Lập 01 website giới thiệu về bản thân và thông tin quá trình thực tập tại I&E Việt Nam",
+        link: "https://example.com/challenge1"
+    },
+    {
+
+        title: "Thử thách 02",
+        date: "00/00/2020 - 09/12/2023",
+        description: "Sử dụng HTML, CSS, JS viết minigame theo chủ đề bốc thăm",
+        link: "https://example.com/challenge1"
+    },
+    {
+
+        title: "Thử thách 03",
+        date: "00/00/2020 - 09/12/2023",
+        description: "Sử dụng quy chuẩn code được đào tạo để thiết kế 02 giao diện theo mẫu thiết kế được cung cấp",
+        link: "https://example.com/challenge1"
+    },
+    {
+
+        title: "Thử thách 04",
+        date: "11/12/2023 - 16/11/2023",
+        description: "Sử dụng INEVO để thiết kế 01 website động lấy dữ liệu thực từ h thống nội bộ",
+        link: "https://example.com/challenge1"
+    },
+    {
+
+        title: "Thử thách 05",
+        date: "00/00/2020 - 09/12/2023",
+        description: "Ứng dụng INEVO triển khai tạo một website giớ thiệu về lịch sử Việt Nam với giao dện tuỳ chon",
+        link: "https://example.com/challenge1"
+    },
+    {
+
+        title: "Thử thách 06",
+        date: "00/00/2020 - 09/12/2023",
+        description: "Thiết kế giao diê phần mềm trên hệ thống nội bộ INEVO theo thiết kế có sẵn",
+        link: "https://example.com/challenge1"
+    },
+    {
+
+        title: "Thử thách 07",
+        date: "11/12/2023 - 16/11/2023",
+        description: "Sử dụng Bảng quản trị trên hệ thống mạng nội bộ INEVO để thực hiện phần mnm quản lý bài viết của bản thân trên hệ thống Inevo",
+
+        link: "https://example.com/challenge1"
+    },
+    // Thêm các thử thách khác vào mảng
+];
+
+let challengesContainer = document.querySelector(".wrap-box");
+challengesContainer.innerHTML = `
+    ${challenges.map(challenge => `
+        <div class="wrap ">
+            <div class="timeline-container">
+                <div class="text-box">
+                    <h2>${challenge.title}</h2>
+                    <small>${challenge.date}</small>
+                    <p>${challenge.description}</p>
+                    ${challenge.link ? `<a href="${challenge.link}">Link tham khảo</a>` : ''}
+                </div>
+            </div>
+        </div>
+    `).join('')}
+`;
 // thiết lập slide
 const slices = document.getElementsByClassName("container-project");
 const currentSlices = document.getElementById('container-project');

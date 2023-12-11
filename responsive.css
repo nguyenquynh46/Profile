@@ -29,8 +29,23 @@
       width: 280px;
       height: 280px;
   }
+  .about{
+      padding: 10% 10% 0;
+  }
   .project .container{
       height: 60vh;
+  }
+  .expected{
+      padding-top:17% ;
+  }
+  .project{
+      padding-top:12% ;
+  }
+  .timeline{
+      padding-top:12% ;
+  }
+  .contact{
+      padding-top:10% ;
   }
     .expected .box-container .box{
         margin: 40px 0;
@@ -188,7 +203,7 @@
    .wrap{
     width: 100%;
    }
-    .wrap.right-container{
+    .wrap-box .wrap:nth-child(2n+2){
         left: 0;
     }
 

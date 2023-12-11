@@ -251,7 +251,7 @@ header .navbar{
 }
 /*about*/
 .about{
-   padding: 10% 15% 0;
+   padding: 6% 15% 0;
 }
 .heading{
     font-size: 40px;
@@ -390,7 +390,7 @@ article i {
 }
 /*challenge*/
 .timeline{
-    padding: 10% 15% 3%;
+    padding: 8% 15% 3%;
     position: relative;
     max-width: 100%;
     z-index: -1;
@@ -442,9 +442,7 @@ article i {
     animation: movedown 1s linear forwards;
     opacity: 0;
 }
-.wrap.right-container{
-    left: 50%;
-}
+
 @keyframes movedown {
     0% {
         transform: translateY(-30px);
@@ -464,7 +462,7 @@ article i {
 }
 
 .wrap-box .wrap:nth-child(2) {
-
+    left: 50%;
     animation-delay: 1s;
 }
 
@@ -474,6 +472,7 @@ article i {
 
 .wrap-box .wrap:nth-child(4) {
     animation-delay: 3s;
+    left: 50%;
 }
 
 
@@ -484,6 +483,7 @@ article i {
 
 .wrap-box .wrap:nth-child(6) {
     animation-delay: 5s;
+    left: 50%;
 }
 
 .wrap-box .wrap:nth-child(7) {
@@ -520,7 +520,7 @@ article i {
 
 /*project*/
 .project {
-    padding: 10% 15% 10%;
+    padding: 8% 15% 10%;
 }
 .project {
     width: 100%;
@@ -624,7 +624,7 @@ article i {
 }
 /*contact*/
 .contact{
-    padding:10% 15% 0;
+    padding:6% 15% 0;
 }
 .contact .row{
     display: flex;
