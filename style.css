@@ -154,7 +154,7 @@ header .navbar{
     object-fit: cover;
 }
 .home-text{
-    padding: 10px;
+    padding: 10px 0;
 }
 .home-text span:first-child{
     padding: 5px 25px;
@@ -176,6 +176,15 @@ header .navbar{
     margin: 0 0 30px;
     line-height: 1.4;
     color: #E2E2ECFF;
+}
+.home-text p i:nth-child(2),.home-text span i{
+    display: block;
+    width: 80px;
+    background: #383528;
+    border-radius: 999px;
+    text-align: center;
+    padding: 5px;
+    margin-top: 5px;
 }
 
 .home .add-content{
@@ -263,15 +272,16 @@ header .navbar{
     margin-right: 20px;
 }
 .dash{
-    width: 100%;
+    width: 90%;
     height: 2px;
     background: #cccc;
-    margin: 0 0 15px;
+    margin: 20px auto 30px;
 }
 .heading-main{
     display: flex;
     justify-content: space-around;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    align-items: center;
 }
 
 .heading-main .main-image{
@@ -349,8 +359,12 @@ article i {
     margin-right: 10px ;
 }
 .expected {
-    padding: 10% 15% 5%;
+    padding: 8% 15% 0;
 }
+.expected .dash{
+    width: 100%;
+}
+
 .section.expected span{
     margin-right: 0;
     margin-left: 10px;
@@ -393,8 +407,6 @@ article i {
     padding: 8% 15% 3%;
     position: relative;
     max-width: 100%;
-    z-index: -1;
-    /*height: 120%;*/
 }
 .timeline-container{
     padding: 10px 20px;
@@ -427,6 +439,21 @@ article i {
     animation: moveline 7s linear forwards;
 
 }
+.timeline-container button{
+    cursor: pointer;
+    border-radius: 999px;
+    padding: 5px 10px;
+    background: #f9ca24;
+    color: black;
+    text-decoration: none;
+
+}
+.timeline-container button:hover{
+
+    background: black;
+    color: #f9ca24;
+    padding: 5px 12px;
+}
 @keyframes moveline {
     0% {
         height: 0;
@@ -457,38 +484,7 @@ article i {
     height: 75%;
 }
 
-.wrap-box .wrap:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.wrap-box .wrap:nth-child(2) {
-    left: 50%;
-    animation-delay: 1s;
-}
-
-.wrap-box .wrap:nth-child(3) {
-    animation-delay: 2s;
-}
-
-.wrap-box .wrap:nth-child(4) {
-    animation-delay: 3s;
-    left: 50%;
-}
-
-
-.wrap-box .wrap:nth-child(5) {
-    animation-delay: 4s;
-}
-
-
-.wrap-box .wrap:nth-child(6) {
-    animation-delay: 5s;
-    left: 50%;
-}
-
-.wrap-box .wrap:nth-child(7) {
-    animation-delay: 6s;
-}
+/**/
 .text-box a{
     font-style: italic;
     cursor: pointer;
@@ -503,7 +499,48 @@ article i {
     border-radius: 6px;
     font-size: 15px;
 }
+/*test*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
+.modal-content {
+    background-color: white;
+    margin:  auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    color: black;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.modal-details {
+    margin-top: 20px;
+}
+
+.challenge-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 10px;
+}
+
+/*hêt test*/
 .wrap-left,.wrap-right{
     width: 50%;
 }
@@ -518,7 +555,7 @@ article i {
 
 /*project*/
 .project {
-    padding: 8% 15% 10%;
+    padding: 8% 15% 1%;
 }
 .project {
     width: 100%;
@@ -614,6 +651,7 @@ article i {
     box-shadow: 1px 4px 2px #333333;
     object-fit: cover;
     z-index: 10000;
+    transition: 0.3s;
 }
 .container-project .box:hover img{
     transform: scale(1.2);
@@ -624,6 +662,10 @@ article i {
 .contact{
     padding:6% 15% 0;
 }
+.contact .dash{
+    width: 100%;
+}
+
 .contact .row{
     display: flex;
     align-items: center;
@@ -688,7 +730,7 @@ article i {
 }
 .contact .row .content .information i{
     color: #f9ca24;
-    margin: 0px 20px 10px 0;
+    margin-right: 20px;
 }
 .top{
     position: fixed;
@@ -717,7 +759,61 @@ article i {
     object-fit: cover;
     color: #eeeeee;
 }
+/*test*/
 
+/* CSS cho modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: relative;
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.modal-content .challenge-title {
+    text-align: center;
+}
+
+.modal-content .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-content .modal-details {
+    margin-top: 20px;
+}
+
+.modal-content .modal-details small,
+.modal-content .modal-details p {
+    margin-bottom: 10px;
+}
+
+.modal-content .modal-details a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.modal-content .modal-details .challenge-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
 
 
 

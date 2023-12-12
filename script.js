@@ -5,14 +5,14 @@ let challenges = [
         title: "Thử thách 01",
         date: "00/00/2020 - 09/12/2023",
         description: "Lập 01 website giới thiệu về bản thân và thông tin quá trình thực tập tại I&E Việt Nam",
-        link: "https://example.com/challenge1"
+        link: "https://gregarious-strudel-01d0d5.netlify.app/"
     },
     {
 
         title: "Thử thách 02",
         date: "00/00/2020 - 09/12/2023",
         description: "Sử dụng HTML, CSS, JS viết minigame theo chủ đề bốc thăm",
-        link: "https://example.com/challenge1"
+        link: "https://quynhnt.thuctap.inevn.com/tt01/"
     },
     {
 
@@ -55,19 +55,60 @@ let challenges = [
 
 let challengesContainer = document.querySelector(".wrap-box");
 challengesContainer.innerHTML = `
-    ${challenges.map(challenge => `
-        <div class="wrap ">
+    ${challenges.map((challenge, i) => `
+        <div class="wrap">
             <div class="timeline-container">
                 <div class="text-box">
                     <h2>${challenge.title}</h2>
                     <small>${challenge.date}</small>
                     <p>${challenge.description}</p>
                     ${challenge.link ? `<a href="${challenge.link}">Link tham khảo</a>` : ''}
+                    <button class="view-details" data-modal-id="modal${i}">Xem chi tiết</button>
                 </div>
             </div>
         </div>
+        <div class="modal" id="modal${i}">
+             <div class="modal-content">
+                 <h3 class="challenge-title">${challenge.title}</h3>
+                 <button class="close-modal">Đóng</button>
+                 <div class="modal-details">
+                     <small>Thời gian :${challenge.date}</small>
+                     <p>Nội dung: ${challenge.description}</p>
+                     ${challenge.link ? `<a href="${challenge.link}">Link tham khảo</a>` : ''}
+                     <img src="path_to_image" alt="Hình ảnh thử thách 1" class="challenge-image">
+                 </div>
+             </div>
+        </div>
     `).join('')}
 `;
+//chuyển động của các thử thách
+const wrapElements = document.querySelectorAll('.wrap-box .wrap');
+
+for (let i = 0; i < wrapElements.length; i++) {
+    wrapElements[i].style.animationDelay = i + 's';
+
+    if (i % 2 === 1) {
+        wrapElements[i].style.left = '50%';
+    }
+}
+// Xử lý sự kiện khi nhấp vào nút "Xem chi tiết"
+const viewDetailsButtons = document.querySelectorAll(".view-details");
+viewDetailsButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const modalId = button.dataset.modalId;
+        const modal = document.getElementById(modalId);
+        modal.style.display = "block";
+    });
+});
+
+// Xử lý sự kiện khi nhấp vào nút "Đóng" trong modal
+const closeModalButtons = document.querySelectorAll(".close-modal");
+closeModalButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const modal = button.closest(".modal");
+        modal.style.display = "none";
+    });
+});
 // thiết lập slide
 const slices = document.getElementsByClassName("container-project");
 const currentSlices = document.getElementById('container-project');
