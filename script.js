@@ -126,42 +126,32 @@ function updateCarousel() {
 function nextSlice() {
     if (currentIndex < slices.length - 1) {
         positionX = positionX - slicesWidth;
-        currentSlices.style.transition = 'transform 0.3s ease-in-out';
-        currentSlices.style.transform = `translateX(${positionX}px)`;
-        //âm là di chuyển từ phải sang trái
         currentIndex++;
+    } else {
+        positionX = 0;
+        currentIndex = 0;
     }
 
-    if (currentIndex === slices.length - 1) {
-        setTimeout(() => {
-            currentSlices.style.transition = 'none';
-            currentSlices.style.transform = 'translateX(0)';
+    currentSlices.style.transition = 'transform 0.3s ease-in-out';
+    currentSlices.style.transform = `translateX(${positionX}px)`;
 
-            positionX = 0;
-            currentIndex = 0;
-        }, 300);
-    }
+
 }
 
 function previousSlice() {
     if (currentIndex > 0) {
         positionX = positionX + slicesWidth;
-        currentSlices.style.transition = 'transform 0.3s ease-in-out';
-        currentSlices.style.transform = `translateX(${positionX}px)`;
-        //chuyển từ trái sang phải
         currentIndex--;
+    } else {
+        positionX = -slicesWidth * (slices.length - 1);
+        currentIndex = slices.length - 1;
     }
 
-    if (currentIndex === 0) {
-        setTimeout(() => {
-            currentSlices.style.transition = 'none';
-            currentSlices.style.transform = `translateX(${slicesWidth * (1 - slices.length)}px)`;
-            positionX = slicesWidth * (1 - slices.length);
-            currentIndex = slices.length;
-        }, 300);
-    }
+    currentSlices.style.transition = 'transform 0.3s ease-in-out';
+    currentSlices.style.transform = `translateX(${positionX}px)`;
+
+
 }
-
 window.addEventListener('resize', function() {
     updateCarousel();
 });
